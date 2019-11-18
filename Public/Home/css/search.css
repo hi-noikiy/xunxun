@@ -1,0 +1,104 @@
+.line{border-top: 1px solid #c6c6c6}
+.search-block{width:1180px;margin:0 auto;}
+.menu-item{height: 80px;line-height: 80px;font-size: 16px;color:#7a7a7a}
+.menu-item span{margin: 0 20px;}
+.car-title{height: 50px;font-size: 36px;}
+.car-num{font-size: 14px;color: #777;margin-bottom:20px;}
+
+.hot-brand:after{display: block;clear: both;content: '\20'}
+.hot-brand{font-size:16px;color:#525252;line-height: 40px;zoom:1;}
+.hot-brand dt{width: 100px;float:left}
+.hot-brand dd{width:calc(100% - 100px);float:left}
+.hot-brand span{display:inline-block;margin-right: 20px;cursor: pointer;padding:0 10px;}
+.hot-brand span.active a{background: #000000;color:#fff; display: block; padding: 0 5px;}
+
+.hot-city:after{display: block;clear: both;content: '\20'}
+.hot-city{font-size:16px;height:40px;color:#525252;line-height: 20px;}
+.hot-city dt{width: 100px;float: left}
+.hot-city dd{width:calc(100% - 100px);float:left}
+.hot-city dd span{display:inline-block;margin-right: 4px;cursor: pointer;padding:0 10px;}
+.hot-city span.active{background: #000000;color:#fff;position: relative;}
+.hot-city span.active::after{display: block; content: ''; width: 20px;height: 20px;background:url(../images/city-list-ico.png) no-repeat;background-size:100%;position: absolute;bottom:-31px;left:50%;transform: translate(-50%, 0)}
+
+.city-list{border: 1px solid #c6c6c6;margin-left: 100px;line-height: 30px;margin-bottom:30px;padding:15px 0}
+.city-list span{padding:0 10px;font-size: 16px;cursor: pointer;color:#666;display:inline-block}
+.city-list span.active{font-weight: bold;color:#000}
+
+.hot-car{padding-top:30px;}
+
+.sorting-operation{width: 100%;height: 64px;line-height: 64px;background:#fff;display:flex;margin-bottom:30px;}
+.sorting-operation li{width: 200px;height: 64px;line-height: 64px;border-right: 1px solid #c6c6c6;text-align: center;cursor: pointer;font-size: 18px;}
+.sorting-operation li::after{display: inline-block;width: 10px;height: 20px;content:'';background-image:url(../images/sort-ico.png);background-repeat:no-repeat; background-size: 100%;position: relative;top:6px;left: 10px;}
+.sorting-operation li.active{background:#ff6400;color: #fff}
+.sorting-operation li.active::after{
+  background-image:url(../images/sort-ico-active.png);
+  top: 1px;
+  transform:rotate(180deg);
+  -ms-transform:rotate(180deg); 	/* IE 9 */
+  -moz-transform:rotate(180deg); 	/* Firefox */
+  -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+  -o-transform:rotate(180deg); 	/* Opera */
+}
+a:link,  a:visited, a:hover {
+    border: none;
+    color:#000;
+}
+
+.main-content .hot-car .hot-car-list{padding-bottom:0}
+/* 分页 */
+.jump{padding:30px 0;}
+.page_div {
+  text-align: center;
+  font-size: 15px;
+  font-family: "microsoft yahei";
+  color: #666666;
+  margin-right: 10px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+/*
+ * 页数按钮样式
+ */
+
+.page_div a {
+  min-width: 30px;
+  height: 28px;
+  border: 1px solid #f7b284!important;
+  text-align: center;
+  margin: 0 4px;
+  cursor: pointer;
+  line-height: 28px;
+  color: #666666;
+  font-size: 13px;
+  display: inline-block;
+}
+
+#firstPage,
+#lastPage {
+  width: 50px;
+  color: #f60;
+  border: 1px solid #f60!important;
+}
+
+#prePage,
+#nextPage {
+  width: 70px;
+  color: #f60;
+  border: 1px solid #f60!important;
+}
+
+.page_div .current {
+  background-color: #f60;
+  border-color: #f60;
+  color: #FFFFFF;
+}
+
+.totalPages {
+  margin: 0 10px;
+}
+
+.totalPages span,
+.totalSize span {
+  color: #f60;
+  margin: 0 5px;
+}

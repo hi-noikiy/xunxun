@@ -1,0 +1,13 @@
+.color{ color: #858D94; }
+
+.position p { height: 50px; line-height: 50px; text-align: left; }
+
+
+.problem_list{ margin-bottom: 130px; }
+.problem_list h2{ height: 60px; line-height: 60px; font-size: 35px; }
+.problem_list ul li{ margin:30px 0;  }
+.problem_list ul li p{  font-size: 18px; line-height: 40px; height: auto;}
+.problem_list ul li .sub_title{ font-size: 25px; color:#000000;}
+.problem_list .solution{ color:#a8a8a8; }
+
+

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>花好月圆</title>
+    <script src="../../../Public/Home/zhongqiu/js/mui.min.js"></script>
+    <link href="../../../Public/Home/zhongqiu/css/mui.min.css" rel="stylesheet"/>
+	<link href="../../../Public/Home/zhongqiu/css/new_file.css" rel="stylesheet" type="text/css"/>
+	<!-- <script src="lottie.js"></script> -->
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+<style type="text/css">
+    .mui-table-view:before {
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 0px !important;
+      content: '';
+      -webkit-transform: scaleY(.5);
+      transform: scaleY(.5);
+      background-color: #c8c7cc;
+      top: -1px;
+    }
+    .flex-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 89%;
+          margin: 0 auto;
+            }
+            .flex-container .flex-item {
+                width: 30%;
+                margin: 10px 0;
+          margin-left:10vw;
+               /* background-color:lightsalmon; */
+            }
+    .mui-col-sm-4{
+      height: 38vw;
+    }
+    .mui-table-view:after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 0px !important;
+      content: '';
+      -webkit-transform: scaleY(.5);
+      transform: scaleY(.5);
+    }
+    
+    img {
+      display: block;
+    }
+
+    .mui-table-view-cell:after{
+
+      height:0
+
+    }
+    .text-p{
+      width: 80%;
+      margin-left:10%;
+      color:rgba(255,255,255,0.75);
+      padding-top: 1.6vw;
+      font-size: 3.5vw;
+      line-height: 1.8;
+    }
+    .text-t{
+      width: 80%;
+      margin-left:10%;
+      color: #FFFFFF;
+      padding-top: 8vw;
+      padding-bottom: 2vw;
+      font-size: 3.8vw;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+	<div class="banner">
+		<img class="bannerbg" src="{$imgurl}/images/banner.png" />
+	</div>
+	<!-- 上周周星榜 -->
+	<div class="mui-media-body itemul">	
+	<div style="font-size: 3.8vw;line-height:6.84vw;font-weight: 1000 ;margin:-9% 10%; color: rgba(255,255,255,0.75);">我愿是初秋的夕阳，慢慢落进你远山的怀里；我愿是中秋的月光，轻轻撒在你如水的眼里；我愿是深秋的野菊，朵朵开在你吟秋的梦里。——Mua语音祝大家中秋快乐</div>
+	</div>
+	<img class="bordertop" style="margin: 8vw 0 5vw 0;" src="{$imgurl}/images/border_bottom.png" />	
+	<!-- 上周周星榜结束 -->
+	<!-- 排行榜 -->
+	<div class="taskRules" style="margin-top: 5vw;">
+		<img class="bordertop" src="{$imgurl}/images/border_star.png" />
+			<!--排行榜前三-->
+			<div class="itemul">
+				<div style="margin-top: 0vw;height: 42vw;">
+				<img src="{$imgurl}/images/1234.png" alt="" class="ranking-img"/>
+				<if condition="$hava_res eq 1">
+					<!-- 排行榜第二 -->
+					<div class="task" style="float: left;margin-top: 3%;width: 22vw;margin-left: 9%;height: 31vw;position: relative;">
+						<div ><img class="taskRules-hean-img" src="{$imgurl}/Public/Uploads/image/logo.png"></div>
+						<div>
+							<p class="taskRules-hean-font">虚位以待</p>
+						</div>
+						<div class="taskRules-hean-box">
+							暂无
+						</div>
+					</div>
+					<!-- 排行榜第一 -->
+					<div class="task2" style="float: left;margin-top: -2.5%;width: 22vw;margin-left: 7%;height: 31vw;position: relative;">
+						<img class="taskRules-hean-img" src="{$imgurl}/Public/Uploads/image/logo.png"/>
+						<div>
+							<p class="taskRules-hean-font">虚位以待</p>
+						</div>
+						<div class="taskRules-hean-box">
+							暂无
+						</div>
+					</div>
+					<!-- 排行榜第三 -->
+					<div class="task3" style="float: left;margin-top: 3%;width: 22vw;margin-left: 7%;height: 31vw;position: relative;">
+						<img  class="taskRules-hean-img" src="{$imgurl}/Public/Uploads/image/logo.png"/>
+						<div>
+							<p class="taskRules-hean-font">虚位以待</p>
+						</div>
+						<div class="taskRules-hean-box">
+							暂无
+						</div>
+					</div>
+					
+				<else />
+
+					<!-- 排行榜第二 -->
+					<div class="task" style="float: left;margin-top: 3%;width: 22vw;margin-left: 9%;height: 31vw;position: relative;">
+						<volist name="result" id="topinfo2" offset="1" length='1'>
+							<div ><img class="taskRules-hean-img" src="{$topinfo2.avatar}"></div>
+							<div>
+								<p class="taskRules-hean-font">{$topinfo2.nickname}</p>
+							</div>
+							<div class="taskRules-hean-box">
+								{$topinfo2.coin}
+							</div>
+						</volist>
+					</div>
+					<!-- 排行榜第一 -->
+					<div class="task2" style="float: left;margin-top: -2.5%;width: 22vw;margin-left: 7%;height: 31vw;position: relative;">
+						<volist name="result" id="topinfo" offset="0" length='1'>
+							<img class="taskRules-hean-img" src="{$topinfo.avatar}"/>
+							<div>
+								<p class="taskRules-hean-font">{$topinfo.nickname}</p>
+							</div>
+							<div class="taskRules-hean-box">
+								{$topinfo.coin}
+							</div>
+						</volist>
+					</div>
+					<!-- 排行榜第三 -->
+					<div class="task3" style="float: left;margin-top: 3%;width: 22vw;margin-left: 7%;height: 31vw;position: relative;">
+						<volist name="result" id="topinfo3" offset="2" length='1'>
+							<img  class="taskRules-hean-img" src="{$topinfo3.avatar}"/>
+							<div>
+								<p class="taskRules-hean-font">{$topinfo3.nickname}</p>
+							</div>
+							<div class="taskRules-hean-box">
+								{$topinfo3.coin}
+							</div>
+						</volist>
+					</div>
+				</if>
+			</div>
+			<!--排行榜前七名-->
+			<volist name="result" id="info7" offset="3" length='7'>
+				<div class="task4" >
+					<div class="task-list-number">{$info7.num}</div>
+					<img class="task-list-img" src="{$info7.avatar}" alt=""/>
+					<div class="task-list-name">{$info7.nickname}</div>
+					<div class="task-list-integral">{$info7.coin}</div>
+					<div class="task-list-integrals">积分</div>
+				</div>
+			</volist>
+			<!--本人数据-->
+			<div class="task-my" >
+				<div class="task5" style="width:82%; margin: 0 auto;padding-top: 2vw;">
+					<div class="task-list-unnumber" style="padding: 0;" >{$info.num}</div>
+					<img class="task-list-img" src="{$info.avatar}" alt=""/>
+					<div class="task-list-name">{$info.nickname}</div>
+					<div class="task-list-integral">{$info.coin}</div>
+					<div class="task-list-integrals">积分</div>
+				</div>
+			</div>
+		</div>
+			</div>
+		<img class="bordertop" src="{$imgurl}/images/bottom_star.png" />		
+	</div>
+	<!-- 排行榜结束 -->
+	<!-- 规则与奖励 -->
+	<div style="margin-top: 4vw;">
+		<img class="bordertop" src="{$imgurl}/images/border_reward.png" />
+		
+		<!-- 1、指定礼物 -->
+		<div class="mui-content mui-row1">
+			<p class="text-t">1、指定礼物</p>
+			<div class="flex-container">
+			        <div class="flex-item"><img class="task-list-img2" src="{$imgurl}/images/gif2.png"/></div>
+					<div class="flex-item"><img class="task-list-img2" src="{$imgurl}/images/gif1.png"/></div>       
+			</div>
+			<div class="flex-container">
+			        <div class="flex-item"><p style="text-align: center; color: #FFFFFF; font-size: 3vw;">伍仁月饼</p></div>
+			        <div class="flex-item"><p style="text-align: center; color: #FFFFFF; font-size: 3vw;">嫦娥奔月</p></div>
+			</div>
+			
+		<p class="text-p">活动不需要报名，收指定礼物即可</p>
+		<p class="text-p">收取指定礼物即可参加比赛，1M豆=1积分</p>
+		<p class="text-p" style="color: #FFFFFF;">最后一天收礼积分减半  1M豆=0.5积分</p>
+		<p class="text-p">收礼物排名前三，可获得对应奖励</p>
+		<!-- 活动奖励 -->
+		<p class="text-t">2、活动奖励</p>
+		<img class="imgift" src="{$imgurl}/images/gift.png" />
+		<p class="text-p">第一名：限定头像框+靓号2019888+100000M豆+所属房间热门推荐5天</p>
+		<p class="text-p">第二名：限定头像框+50000M豆+所属房间热门推荐3天</p>
+		<p class="text-p">第三名：20000M豆+所属房间热门推荐1天</p>
+		
+			
+		<!-- 注意事项 -->
+		<p class="text-t">3、注意事项</p>
+		<p class="text-p">奖励将发送至参加比赛账号，不可更换</p>
+		<p class="text-p">该活动只统计指定礼物，（其余礼物送、收无效，但不影响正常收益）</p>
+		<p class="text-p">严禁利用bug等恶意刷榜，一经发现直接取消比赛资格</p>
+		</div>
+		<img class="bordertop" src="{$imgurl}/images/border_bottom.png" />
+	
+	<div style="font-size: 3vw;text-align: center;padding-bottom: 2vw;color: rgba(255,255,255,0.8);">本活动与苹果公司无关</div>	
+	</body>
+	
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>周星榜</title>
+    <script src="../../../Public/Home/sun/js/mui.min.js"></script>
+    <link href="../../../Public/Home/sun/css/mui.min.css" rel="stylesheet"/>
+	<link href="../../../Public/Home/sun/css/new_file.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+	<style type="text/css">
+		.mui-table-view:before {
+			position: absolute;
+			right: 0;
+			left: 0;
+			height: 0px !important;
+			content: '';
+			-webkit-transform: scaleY(.5);
+			transform: scaleY(.5);
+			background-color: #c8c7cc;
+			top: -1px;
+		}
+		.mui-col-sm-4{
+			height: 38vw;
+		}
+		.mui-table-view:after {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 0px !important;
+			content: '';
+			-webkit-transform: scaleY(.5);
+			transform: scaleY(.5);
+			background-color: #c8c7cc;
+		}
+		
+		img {
+			display: block;
+		}
+		.mui-table-view-cell:after{
+			height:0
+		}
+		.text-p{
+			width: 80%;
+			margin-left:10%;
+			color: #FFFFFF;
+			padding-top: 2vw;
+			font-size: 3vw;
+			line-height: 1.7;
+		}
+		
+	
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<img class="bannerbg" src="../../../Public/Home/sun/images/banner.png" />
+	</div>
+	<!-- 周榜礼物 -->
+	<div>
+		<img class="bordertop" src="../../../Public/Home/sun/images/border_gift.png" />
+	
+		        
+		            <div class="mui-media-body itemul">
+						
+						<img class="task-list-img2" src="../../../Public/Home/sun/images/sunflower.gif">
+						
+
+		                <p class='mui-ellipsis' style="text-align: center;padding:2% 0; color: #FFFFFF;font-size: 4vw;">向日葵</p>
+					</div>
+				<!-- </div> -->
+		      <!--      </div>
+		        </a>
+		    </li>
+		</ul> -->
+		<img class="bordertop" src="../../../Public/Home/sun/images/border_bottom.png" />
+	</div>
+	<div class="taskRules" style="height: 201.5vw;margin-top: 5vw;">
+		<img class="bordertop" src="../../../Public/Home/sun/images/border_star.png" />
+			<!--排行榜前三-->
+			<div class="itemul">
+				<div style="margin-top: 0vw;height: 42vw;">
+				<img src="../../../Public/Home/sun/images/1234.png" alt="" class="ranking-img">
+				<!-- 排行榜第三 -->
+				<div class="task" style="float: left;margin-top: 7%;width: 22vw;margin-left: 15%;height: 31vw;position: relative;">
+					<volist name="result" id="topinfo3" offset="2" length='1'>
+						<div ><img class="taskRules-hean-img" src="{$topinfo.avatar}"></div>
+						<div>
+							<p class="taskRules-hean-font">{$topinfo3.nickname}</p>
+						</div>
+						<div class="taskRules-hean-box">
+							{$topinfo3.coin}
+						</div>
+					</volist>
+				</div>
+				<!-- 排行榜第一 -->
+				<div class="task2" style="float: left;margin-top: 2%;width: 22vw;margin-left: 1%;height: 31vw;position: relative;">
+					<volist name="result" id="topinfo" offset="0" length='1'>
+						<img class="taskRules-hean-img" src="{$topinfo.avatar}">
+						<div>
+							<p class="taskRules-hean-font">{$topinfo.nickname}</p>
+						</div>
+						<div class="taskRules-hean-box">
+							{$topinfo.coin}
+						</div>
+					</volist>
+				</div>
+				<!-- 排行榜第二 -->
+				<div class="task3" style="float: left;margin-top: 7%;width: 22vw;margin-left: 1.5%;height: 31vw;position: relative;">
+					<volist name="result" id="topinfo2" offset="1" length='1'>
+						<img  class="taskRules-hean-img" src="{$topinfo2.avatar}">
+						<div>
+							<p class="taskRules-hean-font">{$topinfo2.nickname}</p>
+						</div>
+						<div class="taskRules-hean-box">
+							{$topinfo2.coin}
+						</div>
+					</volist>
+				</div>
+			</div>
+			<!--排行榜前七名-->
+			<volist name="result" id="info7" offset="3" length='7'>
+				<div class="task4" >
+					<div class="task-list-number">{$info7.num}</div>
+					<img class="task-list-img" src="{$info7.avatar}" alt="">
+					<div class="task-list-name">{$info7.nickname}</div>
+					<div class="task-list-integral">{$info7.coin}</div>
+					<div class="task-list-integrals">积分</div>
+				</div>
+			</volist>
+			<!--本人数据-->
+			
+		</div>
+			</div>
+		<img class="bordertop" src="../../../Public/Home/sun/images/bottom_star.png" />
+			
+	</div>
+	<div>
+		<img class="bordertop" src="../../../Public/Home/sun/images/border_reward.png" />
+		<div class="mui-content mui-row1">
+		    <div class="mui-row" style="width: 82%; margin-left: 12%;">
+		      <div class="mui-col-sm-4" >
+		      	<li class="mui-table-view-cell" style="padding-top: 2vw;">
+		      	    <a class="mui-navigate-right">
+		      	        <img class="task-list-img2" src="../../../Public/Home/sun/images/sunflower.png" />
+		      	    </a>
+					<a  style="text-align: center;padding-top:0.3125rem ;">
+					      向日葵头框
+						
+					  </a>
+					<a  style="text-align: center;padding-top:0.3125rem ;">
+					    *7天
+					</a>
+		      	</li>
+		         
+		      </div>
+				<div class="mui-col-sm-4">
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right" style="font-size:5em;line-height: 26vw;text-align: center;">
+				          +
+				        </a>
+				    </li>
+				</div>
+				<div class="mui-col-sm-4">
+				   <!-- <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">
+				            <img class="task-list-img2" src="images/sunflower.png" />
+				        </a>
+				    </li> -->
+					<li class="mui-table-view-cell" style="padding-top: 1vw;">
+					    <a class="mui-navigate-right" style="text-align: center;font-size: 5vw;margin-top: 8vw;line-height: 8vw;">
+					       100000  
+					   <br/>
+						   钻石  
+						</a>
+						
+					</li>
+				</div>
+		        
+		    </div>
+		</div>
+		<img class="bordertop" src="../../../Public/Home/sun/images/border_bottom.png" />
+	</div>
+	<div style="margin-top: 5vw;">
+		<img class="bordertop" src="../../../Public/Home/sun/images/border_detail.png" />
+		<div class="mui-row1">
+			<p class="text-p">1、评选时间：每周一00:00至每周日23:59</p>
+			<p class="text-p">2、每周官方指定周星礼物，收到周星礼物即可增加积分及排名，冠军获得相应奖励。（注：1M豆=1积分）</p>
+			<p style="width: 100%; text-align: center;color: #01f7f0;font-size: 3vw;padding-top:2vw;">收到非周星礼物无法增加礼物值及排名</p>
+		</div>
+		<img class="bordertop" src="../../../Public/Home/sun/images/bottom_rule.png" />
+	</div>
+			
+	</body>
+	
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>中秋拍卖会</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="banner">
+    <div class="nav">
+      <ul id="ul1">
+        <li>
+          <p class="p1">9.13号</p>
+          <p class="p2" style="font-size:3vw">Ns甜蜜恋人</p>
+          <p class="p3" style="font-size:2vw">(20:00-21:00)</p>
+        </li>
+        <li>
+          <p class="p1">9.14号</p>
+          <p class="p2" style="font-size:3vw">mr迷人女友</p>
+          <p class="p3" style="font-size:2vw">(20:00-22:00)</p>
+        </li>
+        <li>
+          <p class="p1">9.14号</p>
+          <p class="p2" style="font-size:3vw">YG野格</p>
+          <p class="p3" style="font-size:2vw">(20:00-22:00)</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+  
+   <div id="imgg">
+      <img class="img" src="http://image.57xun.com/images/1_ns.png" alt="">
+      <img class="img" src="http://image.57xun.com/images/2_mr.png" alt="">
+      <img class="img" src="http://image.57xun.com/images/3_yg.png" alt="">
+    </div>
+
+  <div class="zqlg"></div>
+  <script src="./jquery-1.12.4.js"></script>
+  <script>
+    $('#imgg img').eq(0).addClass('images');
+    $('#ul1 li').eq(0).addClass('active');
+    $('li').click(function (event) {
+      var index = $(this).index();
+      $('#imgg img').eq(index).addClass('images').siblings().removeClass('images ');
+      // $('').addClass('images ');
+      $(this).addClass('active').siblings().removeClass('active ');
+    })
+  </script>
+</body>
+
+</html>

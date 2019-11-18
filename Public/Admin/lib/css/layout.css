@@ -1,0 +1,14 @@
+.case-trend{border:1px solid #EAEAEA;box-sizing: border-box}
+.case-trend-title{height:40px;border-bottom:1px solid #EAEAEA;}
+.case-trend-title dt,.case-trend-title dd{line-height: 40px;padding:0 20px;}
+.case-trend-title dt{float: left;}
+.case-trend-title dd{float: right;}
+.case-trend-title dd span{display:inline-block;padding:0 20px;cursor: pointer;}
+.case-trend-title dd span.active{border-bottom:2px solid #21a7f0;box-sizing: border-box}
+
+.echarts-list{margin-top:20px;display:flex}
+.echarts-list dl{flex: 1;border:1px solid #EAEAEA;box-sizing: border-box}
+.echarts-list dl:nth-child(2){border-left: 0 none;border-right: 0 none}
+.echarts-list dl dt{height: 40px;line-height: 40px;padding:0 10px;font-weight: bold;border-bottom: 1px solid #ddd;}
+.echarts-list dl dd{height: 30px;line-height: 30px;padding:0 10px;border-bottom:1px solid #EAEAEA}
+.echarts-list dl dd:last-child{border-bottom:0 none}

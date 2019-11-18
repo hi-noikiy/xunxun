@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<title>活动</title>
+
+<link href="../../../Public/Home/css/indexqixi.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../../Public/Home/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../../../Public/Home/js/awardRotate.js"></script>
+<script type="text/javascript" src="../../../Public/Home/js/indexqixi.js"></script>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	/* margin-top: -21%; */
+	
+}
+
+element.style {
+    height: 116vw;
+}
+.noscroll{
+            height: 100%;
+            overflow: hidden;
+		}
+.zhubo{
+	display: flex;
+	justify-content:space-around;
+}
+
+.zhubo p{
+	font-size: 1.2rem;
+	color: pink;
+	font-weight:800;
+	margin-right: 5rem;
+}
+
+.zu-1{
+	display: flex;
+	margin-top: 0.8rem;
+}
+
+.diyi{
+	width: 50%;
+}
+
+
+.diyi img{
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	margin-left: -1.3rem;
+	text-align: center;
+}
+
+.diyi h3{
+	text-align: center;
+	margin-left: -6rem;
+}
+
+.diyi .p-1{
+	width: 100%;
+}
+.diyi .p-1 p{
+	font-size: 1rem;
+	color: pink;
+	margin-left: -1rem;
+}
+
+.diyi .p-1 span{
+	font-size: 1rem;
+	color: grey;
+}
+
+
+.shouhu{
+	width: 50%;
+}
+
+
+.shouhu img{
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	margin-left: -0.5rem;
+	text-align: center;
+}
+
+.shouhu .p-1{
+	width: 100%;
+}
+.shouhu .p-1 p{
+	font-size: 1rem;
+	color: pink;
+	
+}
+
+.shouhu .p-1 span{
+	font-size: 1rem;
+	color: grey;
+	
+}
+
+
+
+.hh{
+	display: flex;
+	margin-top: 0.8rem;
+}
+
+.keyi{
+	width: 50%;
+}
+
+
+.keyi img{
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	margin-left: 4.6rem;
+	text-align: center;
+}
+
+.keyi h3{
+	text-align: center;
+	margin-left: 3rem;
+}
+
+.keyi .p-1{
+	width: 100%;
+}
+.keyi .p-1 p{
+	font-size: 1rem;
+	color: pink;
+	margin-left: 5.3rem;
+}
+
+
+.keyi .p-1 span{
+	font-size: 1rem;
+	color: grey;
+}
+
+
+.yy{
+	width: 50%;
+}
+
+
+.yy img{
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	margin-left: 2.3rem;
+	text-align: center;
+}
+
+.yy h3{
+	margin-left: 3rem;
+}
+
+.yy .p-1{
+	width: 100%;
+}
+.yy .p-1 p{
+	font-size: 1rem;
+	color: pink;
+	margin-left: 3rem;
+	
+}
+
+.yy .p-1 span{
+	font-size: 1rem;
+	color: grey;
+	
+}
+
+
+
+
+</style>
+</head>
+<body>
+	<!-- 弹出层 -->
+	<div class="cover"></div>
+	<!-- <div class="covers1">
+		<div class="covers_quit">
+			<img src="{:C('APP_URL_image_web')}/qixi/images/pop_up_quit_icon.png" alt="pop_up_quit_icon" />
+		</div>
+		<div class="covers_icon">
+			<img src="{:C('APP_URL_image_web')}/qixi/images/task_draw_reward_free_img.png" alt="task_draw_reward_free_img" />
+		</div>
+		<div class="covers_font">恭喜您获得1次<span>免费</span>的机会</div>
+		<div class="covers_btn">立即前往抽奖</div>
+	</div> -->
+
+	<!--弹层1-->
+	<div class="covers2" style="background-color:'#171c60';overflow:scroll;height: 107vw;">
+			<div class="covers_quit">
+				<img src="{:C('APP_URL_image_web')}/qixi/images/bs47.png" alt="pop_up_quit_icon" />
+			</div>
+			<img style="width:83vw;" src="{:C('APP_URL_image_web')}/qixi/images/bs46.png">
+	</div>
+
+	<!--弹层2-->
+	<div id= "tangcenghtml" class="covers3" style="background-image:url('{:C('APP_URL_image_web')}/qixi/images/88.png');background-size: cover;background-repeat: no-repeat;height: 107vw;">
+		
+		
+	</div>
+
+	<!-- <div class="float_btn" id="guize" style="color:'F89ABA';"></div> -->
+	<!-- <div class="float_btn" id="guize" style="color:'F89ABA';background-image:url(http://img.muayy.com/qixi/images/bs45.png);">规则奖励</div>-->
+	<img src="{:C('APP_URL_image_web')}/qixi/images/bs45.png" class="covers-rule float_btn" alt="" id="guize" id="guize"/>
+	<!-- <div class="float_btn" id="guize2">规则奖励</div> -->
+
+
+
+	<div class="turntable" style="height: 262vw">
+		<img class="turntablebg" src="{:C('APP_URL_image_web')}/qixi/images/bj1.png" alt="turntableBg"/>
+		<img class="turntablebg" src="{:C('APP_URL_image_web')}/qixi/images/task_draw_reward_default_bg2.png" alt="turntableBg2"/>
+	</div>
+	<div class="taskRules" style="height: 300vw;background-image: url('{:C('APP_URL_image_web')}/qixi/06.png');">
+		<!--排行榜前三-->
+	<div style="margin-bottom: 5vw;">
+		<div style="margin-top: 20vw;">
+			<!-- <img src="{:C('APP_URL_image_web')}/qixi/images/1234.png" alt="" class="ranking-img"> -->
+			<!-- 排行榜第三 -->
+			<!-- <div class="task" style="float: left;margin-top: 7%;width: 22vw;margin-left: 15%;height: 31vw;position: relative;">
+				<volist name="top" id="topinfo3" offset="2" length='1'>
+					<div ><img class="taskRules-hean-img" src="{$topinfo3.avatar}"></div>
+					<div class="taskRules-hean-font">
+						<p >{$topinfo3.nickname}</p>
+					</div>
+					<notempty name="topinfo3['likeimg']">
+						<div class="taskRules-hean-box tanceng" touid="{$topinfo3.touid}" uid="{$topinfo3.uid}">
+							<img class="taskRules-little-crown" src="{:C('APP_URL_image_web')}/qixi/images/crown.png" alt="">
+								<foreach name="topinfo3['likeimg']" item="ava" >
+									<img class="taskRules-little-img1" src="{$ava.avatar}" alt="" uid="{$topinfo3.touid}">
+								</foreach>
+							<img class="taskRules-little-img4" src="{:C('APP_URL_image_web')}/qixi/images/blue.png" alt="">
+						</div>
+					</notempty>
+				</volist>
+			</div> -->
+			<!-- 排行榜第一 -->
+			<!-- <div class="task2" style="float: left;margin-top: 1%;width: 22vw;margin-left: 1%;height: 31vw;position: relative;">
+				<volist name="top" id="topinfo" offset="0" length='1'>
+					<img class="taskRules-hean-img" src="{$topinfo.avatar}">
+					<div class="taskRules-hean-font">
+						<p >{$topinfo.nickname}</p>
+					</div>
+					<notempty name="topinfo['likeimg']">
+						<div class="taskRules-hean-box tanceng" touid="{$topinfo.touid}" uid="{$topinfo.uid}">
+							<img class="taskRules-little-crown" src="{:C('APP_URL_image_web')}/qixi/images/crown.png" alt="">
+								<foreach name="topinfo['likeimg']" item="ava" >
+									<img class="taskRules-little-img1" src="{$ava.avatar}" alt="" uid="{$topinfo.touid}">
+								</foreach>
+							<img class="taskRules-little-img4" src="{:C('APP_URL_image_web')}/qixi/images/pink.png" alt="">
+						</div>
+					</notempty>
+				</volist>
+			</div> -->
+			<!-- 排行榜第二 -->
+			<div class="task3" style="float: left;margin-top: 7%;width: 22vw;margin-left: 1.5%;height: 31vw;position: relative;">
+				<volist name="top" id="topinfo2" offset="1" length='1'>
+					<img  class="taskRules-hean-img" src="{$topinfo2.avatar}">
+					<div class="taskRules-hean-font">
+						<p >{$topinfo2.nickname}</p>
+					</div>
+					<notempty name="topinfo2['likeimg']">
+						<div class="taskRules-hean-box tanceng" touid="{$topinfo2.touid}" uid="{$topinfo2.uid}">
+							<img class="taskRules-little-crown" src="{:C('APP_URL_image_web')}/qixi/images/crown.png" alt="">
+								<foreach name="topinfo2['likeimg']" item="ava" >
+									<img class="taskRules-little-img1" src="{$ava.avatar}" alt="" uid="{$topinfo2.touid}">
+								</foreach>
+							<img class="taskRules-little-img4" src="{:C('APP_URL_image_web')}/qixi/images/yello.png" alt="">
+						</div>
+					</notempty>
+				</volist>
+			</div>
+		</div>
+	</div>
+<!-- 主播守护 -->
+	<div class="zhubo">
+		<p>主播</p>
+		<p>守护</p>
+
+	</div>
+
+	<!-- 十张图 -->
+
+	<div class="zu-1">
+		<volist name="result" id="result1" offset="0" length='1'>
+			<div class="diyi">
+				<img src="{$result1.avatar}" alt="">
+				<h3>{$result1.nickname}</h3>
+				<div class="p-1">
+					<p>{$result1.coin} <span>积分</span></p>
+				</div>
+
+			</div>
+			<div class="shouhu">
+					<img src="{$result1.likeimg.avatar}" alt="">
+					<h3>{$result1.likeimg.nickname}</h3>
+					<div class="p-1">
+						<p>{$result1.likeimg.coin} <span>积分</span></p>
+					</div>
+		
+			</div>
+		</volist>
+	</div>
+
+
+<volist name="result" id="result2" offset="1" length='9'>
+	<div class="hh">
+
+			<div class="keyi">
+				<img src="{$result2.avatar}" alt="">
+				<h3>{$result2.nickname}</h3>
+				<div class="p-1">
+					<p>{$result2.coin} <span>积分</span></p>
+				</div>
+	
+			</div>
+			<div class="yy">
+					<img src="{$result2.likeimg.avatar}" alt="">
+					<h3>{$result2.likeimg.nickname}</h3>
+					<div class="p-1">
+						<p>{$result2.likeimg.coin} <span>积分</span></p>
+					</div>
+		
+			</div>
+	
+	</div>
+</volist>
+
+	<!-- <div class="hh">
+
+			<div class="keyi">
+				<img src="http://b-ssl.duitang.com/uploads/item/201603/27/20160327101040_fFSku.jpeg" alt="">
+				<h3>海边的啦啦啦</h3>
+				<div class="p-1">
+					<p>12330 <span>积分</span></p>
+				</div>
+	
+			</div>
+			<div class="yy">
+					<img src="http://b-ssl.duitang.com/uploads/item/201603/27/20160327101040_fFSku.jpeg" alt="">
+					<h3>海边的啦啦啦</h3>
+					<div class="p-1">
+						<p>12330 <span>积分</span></p>
+					</div>
+		
+			</div>
+	
+	</div>
+
+	<div class="hh">
+
+			<div class="keyi">
+				<img src="http://b-ssl.duitang.com/uploads/item/201603/27/20160327101040_fFSku.jpeg" alt="">
+				<h3>海边的啦啦啦</h3>
+				<div class="p-1">
+					<p>12330 <span>积分</span></p>
+				</div>
+	
+			</div>
+			<div class="yy">
+					<img src="http://b-ssl.duitang.com/uploads/item/201603/27/20160327101040_fFSku.jpeg" alt="">
+					<h3>海边的啦啦啦</h3>
+					<div class="p-1">
+						<p>12330 <span>积分</span></p>
+					</div>
+		
+			</div>
+	
+	</div> -->
+
+	
+		
+		
+
+
+		<div style="height: 0vw">
+			<!--排行榜前七名-->
+			<volist name="list" id="listinfo" ofs="listnum">
+				<div class="task4" >
+					<div class="task-list-number">{$listinfo.num}</div>
+					<img class="task-list-img" src="{$listinfo.avatar}" alt="">
+					<div class="task-list-name">{$listinfo.nickname}</div>
+					<div class="task-list-integral">{$listinfo.coin}</div>
+					<div class="task-list-integrals">积分</div>
+				</div>
+			</volist>
+		</div>
+		<!--本人数据-->
+		<div class="task-my" >
+			<div class="task-list-number">{$info.num}</div>
+			<img class="task-list-img" src="{$info.avatar}" alt="">
+			<div class="task-list-name">{$info.nickname}</div>
+			<div class="task-list-integral">{$info.coin}</div>
+			<div class="task-list-integrals">积分</div>
+		</div>
+	</div>
+
+
+<!--规则弹窗jq-->
+	<script type="text/javascript">
+	  $("#guize").click(function(){
+	  	$("html,body").toggleClass('noscroll');
+	  	// $(document.body).css({'overflow':'hidden'})
+	  	// $(".cover").show();
+	  	$(".covers2").show();
+	  });
+
+
+	  $(".tanceng").click(function(){
+	  	var touid = $(this).attr("touid");
+	  	var uid = $(this).attr("uid");
+	  	if (touid == null || touid == undefined) {
+	  		return false;
+	  	}
+	  	$(document.body).css({'overflow':'hidden'})
+	  	$("html,body").toggleClass('noscroll');
+	  	// $(".cover").show();
+	  	$(".covers3").show();
+	  	// alert(touid);
+	  	$.ajax({
+	        url: '/index.php/home/qixi/qxranklike?touid='+touid+'&uid'+uid,
+	        type: "get",
+	        // dataType: 'jsonp', 
+	        // data:{
+	        //     "touid":touid,
+	        //     "uid":uid
+	        // },
+	        success: function(data) {
+	        	$("#tangcenghtml").empty(); 
+	            console.log(data);
+	            $("#tangcenghtml").append(data);
+	        },
+	        error: function(xhr, type) {
+	        }
+        });
+	  // 	$.ajax({
+   //        url:'/index.php/home/qixi/qxrank?touid='+touid+'?uid='+uid,
+   //        type:'get',
+   //        // data:'',
+   //        // timeout:15000,
+   //       //  beforeSend:function(XMLHttpRequest){
+   //       // },
+   //       success:function(data){
+   //       	$("tangcenghtml").append(data);
+		 // },
+		 // error:function(XMLHttpRequest,textStatus,errorThrown){
+		     
+		 // }
+   //     });
+
+	  });
+	</script>
+		
+</body>
+</html>

@@ -1,0 +1,122 @@
+.banner{ height: 460px;position: relative;}
+.banner .banner{ height: 100%; }
+.slide-banner{ position: absolute; width: 100%;height: 100%;overflow: hidden;}
+.slide-banner ul,.slide-banner li{ width: 100%;height: 100%;}
+.slide-banner .tb-btn{ bottom: 30px;}
+.slide-banner .tb-btn a{ width: 45px; height: 4px; margin: 0 5px; background-color: rgba(255,255,255,.5); border-radius: 0; }
+.slide-banner .tb-btn a.active{background-color: rgba(255,255,255,1);}
+
+
+.loan-application {width: 350px; height: 400px; background-color: #fff;border-radius: 5px;top: 30px; right: 0; }
+.loan-application .loan-title {color: #3c4650; font-size: 20px; line-height: 36px; text-align: center; padding-top: 15px;}
+.loan-application .loan-sub-title {color: #3c4650; font-size: 13px; line-height: 20px; text-align: center;margin-bottom: 12px; }
+.loan-application .form-group { margin: 0 45px 5px;}
+.loan-application .loan-form input{ width: 260px; height: 43px; line-height: 43px; border: solid 1px #c8d2dc; padding:0 20px; }
+.loan-application .loan-checkbox { line-height: 40px; margin-bottom: 0; }
+.loan-application .loan-checkbox label{ color: #8c96a0; font-size: 12px; user-select: none; }
+.loan-application .loan-checkbox input[type="checkbox"]{ width: 13px; vertical-align: middle; margin: 0 3px;}
+.loan-application .loan-form button[type="submit"]{display: block; margin: 0 45px; width: 260px; height: 43px;line-height: 43px; color: #fff;background-color: #ff5000;font-size: 15px; border: none; cursor: pointer;}
+.loan-application .loan-result{ display: none; z-index: 2; top: 44px;  border: solid 1px #c8d2dc; background-color: #fff;}
+.loan-application .car-type-result{  width: 260px; height: 260px; overflow-y: auto;}
+.loan-application .car-type-result li{cursor: pointer; line-height: 38px; height: 38px; padding: 0 20px; color: #666; white-space: nowrap; }
+.loan-application .car-type-result li:hover{ color: #333; background-color: #ddd; }
+.loan-application .car-city-result{ display: block;}
+
+
+
+.main-content .advantages{ height: 160px; overflow: hidden; margin-bottom: 17px;}
+.main-content .advantages ul{ overflow: hidden;}
+.main-content .advantages li{ float: left; width: 295px; padding: 40px 0;}
+.main-content .advantages li.item>img{ width: 80px; height: 80px; border-radius: 50%; float: left; transition: .3s;}
+.main-content .advantages li.item>img:hover{box-shadow: 1px 1px 10px 1px #ccc; }
+.main-content .advantages .advantage-text{ float: left; color: #3c4650; font-size: 22px; padding-left: 20px; line-height: 36px; margin-top: 10px;}
+.main-content .advantages .sub-text{ font-size: 13px; line-height: 26px;}
+
+
+.main-content .hot-car { background-color: #ebf0f5;}
+.main-content .hot-car .channel-title h3{ color: #1e1e1e; font-size: 30px; padding: 30px 0; }
+.main-content .hot-car .channel-title h3 small { color: #505050; font-size: 14px; margin-left: 20px;}
+.main-content .hot-car .channel-title .new-orders {position: relative; color: #505050; font-size: 14px; height: 30px; width: 600px; text-align: right;  line-height: 30px; margin-top: 42px; overflow: hidden;}
+.main-content .hot-car .channel-title .new-orders ul {position: absolute; width: 100%;}
+.main-content .hot-car .hot-car-list {  padding-bottom: 40px;  }
+.main-content .hot-car .hot-car-list li.item{ position: relative; top:0; height: 350px; width: 280px; background-color: #fff; border-radius: 3px; margin-bottom: 24px; margin-right: 20px; transition: .3s; }
+.main-content .hot-car .hot-car-list li.item:hover{ top:-5px; box-shadow: 1px 1px  5px #ccc; }
+.main-content .hot-car .hot-car-list li.item:nth-of-type(4n){ margin-right: 0;}
+.main-content .hot-car .car-tag { display: block; position: absolute; left: 20px; top:20px;  height: 25px; width: 45px; text-align: center; line-height: 25px; border-radius: 3px; background-color: #ff5000; color: #fff;}
+.main-content .hot-car .car-tag.import {background-color: #b02bea; }
+.main-content .hot-car .hot-car-list .hot-car-pic { border-bottom: solid 1px #bec3c8; height: 186px; overflow: hidden;}
+.main-content .hot-car .hot-car-list .hot-car-pic img { /*height: 185px; */width: 100%; vertical-align: middle; }
+.main-content .hot-car .hot-car-list .hot-car-title { font-size: 18px; line-height: 23px; padding: 14px; height: 74px;overflow: hidden; }
+.main-content .hot-car .hot-car-price { font-size: 18px; color: #505050; line-height: 24px; margin-left: 20px; margin-top:10px; }
+.main-content .hot-car .hot-car-price .first-pay { font-size: 20px; color: #ff5000; line-height: 32px; }
+.main-content .hot-car .hot-car-price .first-pay .number{ font-size: 20px; }
+.main-content .hot-car .hot-car-stage-number { font-size: 24px; margin-right: 20px; margin-top: 20px;}
+.main-content .hot-car .hot-car-stage-number .number { font-size: 36px;  }
+.main-content .hot-car .hot-car-stage-number .unit{ font-size: 18px; line-height: 32px; }
+
+.main-content .services { padding: 40px 0;}
+.main-content .services .about-us h3{ color: #1e1e1e; font-size: 30px; line-height: 36px; margin: 28px 0;}
+.main-content .services .about-us p{ font-size: 16px; line-height: 24px; color: #505050; width: 435px;}
+.main-content .services .total-data { font-size: 16px; margin-left: 75px; color: #505050; line-height: 24px;}
+.main-content .services .total-data .number { color: #ff5000; font-size: 50px; line-height: 50px; margin-top: 55px; margin-bottom: 10px;}
+
+.main-content .loan-info{ height: 480px; background: url("../images/loan-info-bg.jpg") 0 0 no-repeat #8c96a0; background-size: cover;}
+.main-content .loan-info .loan-info-list { padding-top: 52px; color: #fff; font-size: 16px; line-height: 24px; }
+.main-content .loan-info .loan-info-list .item { width: 360px; margin-right: 45px; }
+.main-content .loan-info .loan-info-list .item:nth-of-type(3n) {margin-right: 0; }
+.main-content .loan-info .loan-info-list .item>img { border:7px solid #fff; width: 100%; box-sizing: border-box; }
+.main-content .loan-info .loan-info-list .item h3{ font-size: 24px; line-height: 36px; margin-top: 28px; margin-bottom: 15px; }
+
+.main-content .loan-flow { padding: 28px 0 35px;}
+.main-content .loan-flow h3 { color: #1e1e1e; font-size: 30px; padding: 30px 0;line-height: 30px; }
+.main-content .loan-flow h3 small { color: #505050; font-size: 14px; margin-left: 20px; }
+.main-content .loan-flow .loan-flow-con {margin: 30px 0;}
+.main-content .loan-flow .loan-flow-list { }
+.main-content .loan-flow .loan-flow-list li.item { float: left; position: relative; width: 270px; margin-right: 30px; }
+.main-content .loan-flow .loan-flow-list li.item:nth-of-type(4n) { margin-right: 0; }
+.main-content .loan-flow .loan-flow-list li.item>img { width: 75px; height: 75px; float: left; margin-right: 22px;}
+.main-content .loan-flow .loan-flow-list .next-icon { position: absolute;width: 12px; height: 20px; right: 0; top:28px; background: url("../images/loan-flow-back-icon.png") 100% 100% no-repeat; background-size: contain;}
+.main-content .loan-flow .loan-flow-list .step-text { float: left; font-size: 16px; line-height: 30px; color: #505050; margin-top: 12px; }
+.main-content .loan-flow .loan-flow-list .step-text .main-text { color: #1e1e1e; font-size: 24px;}
+
+
+.main-content .questions {}
+.main-content .questions .container { border-top: solid 1px #bec3c8;}
+.main-content .questions h3 { color: #1e1e1e; font-size: 20px; padding: 30px 0;line-height: 30px; margin-top: 20px; }
+.main-content .questions h3 small { color: #505050; font-size: 14px; margin-left: 20px; }
+.main-content .questions .questions-con { position: relative;  }
+.main-content .questions .questions-con { margin-bottom: 62px; }
+.main-content .questions .question-list { width: 420px; }
+.main-content .questions .question-list h4 { font-size: 18px; line-height: 20px; color: #000; margin-top: 6px; padding: 14px 0 ;}
+.main-content .questions .question-list li>a { font-size: 16px; line-height: 28px;  color: #505050;}
+.main-content .questions .question-list li>a:hover { color: #000;}
+.main-content .questions .contact-con { position: absolute;right: 0; top:-15px; text-align: right; }
+.main-content .questions .contact-con .tel-info{  color: #505050; font-size: 14px; line-height: 24px; margin-bottom: 50px;}
+.main-content .questions .contact-con .phone-num{  color: #ff5000; font-size: 36px; line-height: 36px; margin-bottom: 12px;}
+
+.main-content .partners{}
+.main-content .partners .container { border-top: solid 1px #bec3c8;}
+.main-content .partners h3 { color: #1e1e1e; font-size: 30px; padding: 30px 0;line-height: 30px; margin-top: 20px; }
+.main-content .partners h3 small { color: #505050; font-size: 14px; margin-left: 20px; }
+.main-content .partners .partners-list { margin-bottom: 42px; }
+.main-content .partners .partners-list li.item { float: left; width: 180px; height: 80px; margin:10px 10px 10px 0; background-color: #ccc; }
+.main-content .partners .partners-list li.item img { width: 100%; height: 100%; }
+
+
+.loan-car-list {display: none; position: absolute; left: 0; top: 45px; width: 260px; /*max-height: 300px; overflow-y: auto; */border: solid 1px #ccc; background: #fff; z-index: 11; }
+.loan-car-list li.list-item{ width: 100%; line-height: 32px; text-indent:20px; border-bottom: solid 1px #efefef; position: relative;}
+.loan-car-list li.list-item:last-child{ border-bottom:none;}
+.loan-car-list li.list-item:hover{ background-color: #ddd;}
+.loan-car-list li.list-item.active{background-color: #fd7639 ;}
+.loan-car-list li.list-item.active .brand-name{color: #fff;}
+.loan-car-list .sub-list{ display:none;background:#fff; }
+.loan-car-list .sub-list li.sub-list-item{width: 100%; line-height: 32px; text-indent:40px; border-bottom: solid 1px #efefef; cursor: pointer;}
+.loan-car-list .sub-list li.sub-list-item:nth-of-type(1){border-top: solid 1px #fff;}
+.loan-car-list .sub-list li.sub-list-item:hover{background-color: #efefef; }
+.loan-car-list .sub-list li.sub-list-item.active{background-color: #fd7639; color: #fff; }
+
+
+
+
+
+

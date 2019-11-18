@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>充值</title>
+	<link rel="stylesheet" href="../../../../Public/Home/css/style.css">
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="../../../../Public/Home/js/popups.js"></script>
+	<script>
+	    setSize();
+	    addEventListener('resize',setSize);
+	    function setSize() {
+	        document.documentElement.style.fontSize = document.documentElement.clientWidth/750*100+'px';
+	    }
+	</script>
+    <style>
+	    *{
+		    margin: 0;
+		    padding: 0;
+	    }
+	    html,body{
+		    width: 100%;
+		    height: 100%;
+	    }
+		/* 总盒子 */
+        .backgroud-content-box{
+	        overflow: hidden;
+			/*position:fixed;*/
+			/*top: 0;*/
+			/*left: 0;*/
+			width:100%;
+			height:100%;
+			/*z-index:-10;*/
+			/*zoom: 1;*/
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center 0;
+			background-image:url(../../../../Public/Home/images/background.png);
+        }
+		 /* 顶端盒子 */
+		.top-box{
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			height: 12vw;
+			border: 0.0625rem solid #FFFFFF;
+			background-color: #FFFFFF;
+			margin-top: 5vw;
+			padding: 0 5vw;
+		}
+		/* 顶端盒子提示语 */
+		.top-box-hint-font{
+			font-size: 3vw;
+			/*margin-top: 3vw;*/
+			/*margin-left: 4%;*/
+			/*float: left;*/
+		}
+		/* 顶端盒子按钮 */
+		.top-box-hint-button-font{
+			width: 25vw;
+			line-height: 8vw;
+			text-align: center;
+			background-color:#FFA28D ;
+			color: white;
+			/*float: left;*/
+			border-radius:2em;
+			font-size: 3vw;
+			/*margin-top: 1.8vw;*/
+			/*margin-left: 27%;*/
+		}
+		/* 顶端盒子字 */
+		/*.top-box-hint-button-font{*/
+			/*font-size: 4vw;*/
+			/*margin-left: 4.5vw;*/
+			/*margin-top: 1.3vw;*/
+			/*color: #fff;*/
+		/*}*/
+		/* 充值盒子 */
+		.pay-box{
+			width: 90%;
+			height: 80%;
+			background: #fff;
+			margin-top: 5vw;
+			margin-left: 5%;
+			border-radius: 0.625rem;
+
+		}
+		/* 选择充值豆豆 */
+		.pay-box-select-bean{
+			width: 100%;
+			height: 40%;
+			padding-top: 3vw;
+			margin-left: 0.5%;
+		}
+		/*充值豆豆小盒子*/
+		.pay-box-select-bean-letter{
+			width: 27vw;
+			height: 12vw;
+			margin-left: 2.5%;
+			margin-top: 5%;
+			float: left;
+			zoom: 1;
+			background-size: cover;
+			background-position: center 0;
+			background-image:url(../../../../Public/Home/images/frameno.png) ;
+			background-repeat: no-repeat;
+		}
+		.pay-box-select-bean-letter-new{
+			width: 27vw;
+			height: 12vw;
+			margin-left: 2.5%;
+			margin-top: 5%;
+			float: left;
+			zoom: 1;
+			background-size: cover;
+			background-position: center 0;
+			background-image:url(../../../../Public/Home/images/frame.png) ;
+			background-repeat: no-repeat;
+		}
+		/* 充值豆豆背景图 */
+		.pay-box-select-bean-letter-back{
+			max-width: 100%;
+			z-index: 1;
+		}
+		/* 豆豆本豆豆 */
+		.pay-box-select-bean-letter-bean{
+			left: 1vw;
+			top:  -9.5vw;
+			width: 6vw;
+			height: 6vw;
+			/* width: 1.375rem;
+			height: 1.375rem; */
+			position: relative;
+			z-index: 2;
+		}
+		/*充值数量*/
+		.pay-box-select-bean-letter-num{
+			left: 10vw;
+			margin-top: 1vw;
+			/* width: 1.875rem;
+			height: 1.875rem; */
+			position: relative;
+			z-index: 2;
+			font-size:3.5vw;
+			font-weight: bold;
+		}
+		/*充值金额*/
+		.pay-box-select-bean-letter-money{
+			left: 8vw;
+			/* margin-top: -4vw; */
+			position: relative;
+			z-index: 2;
+			color: #FFB9B9;
+			font-size: 3vw;
+		}
+		/* 充值提示语 */
+	    .pay-box-select-bean-reminder{
+		    width: 100%;
+		    text-align: center;
+		    margin-bottom: 10vh;
+		    font-size: 3vw;
+	    }
+		/* 确认充值按钮 */
+	    .pay-box-foot-button{
+		    font-size: 3vw;
+		    width: 80%;
+		    margin: 0 auto;
+		    text-align: center;
+		    line-height: 10vw;
+		    background: #ff7171;
+		    border-radius: 15px;
+		    color: white;
+	    }
+    </style>
+</head>
+<body>
+    <div class="backgroud-content-box">
+		<!-- 顶端盒子 -->
+		<div class="top-box">
+			<div class="top-box-hint-font">登录才能充值哦！</div>
+			<div class="top-box-hint-button-font">立即登录</div>
+		</div>
+		<!-- 顶端盒子结束 -->
+		<!-- 充值盒子 -->
+	    <div class="pay-box">
+		    <!-- 选择充值豆豆 -->
+		    <div class="pay-box-select-bean">
+			    <volist name="result" id="result">
+				    <div class="pay-box-select-bean-letter" id="{$result.id}" diamond="{$result.diamond}" rmb="{$result.rmb}" >
+					    <p class="pay-box-select-bean-letter-num">{$result.diamond}</p>
+					    <p class="pay-box-select-bean-letter-money">￥{$result.rmb}</p>
+				    </div>
+			    </volist>
+		    </div>
+		    <div class="pay-box-select-bean-reminder">未成年在Mua充值，必须得到家长或其他监护人同意</div>
+		    <!-- 点击充值 -->
+		    <div class="pay-box-foot-button">确认充值</div>
+	    </div>
+		<!-- 充值盒子结束 -->
+    </div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	$(".pay-box-select-bean-letter").each(function () {
+		$(this).bind('click',function(){
+			jqalert({
+			    content:'您还没有登录，请先登录',
+			    yeslink:"/index.php/Home/alishh/userPay"
+			})
+		})
+	});
+	$(".pay-box-foot").click(function(){
+		jqalert({
+		    content:'您还没有登录，请先登录',
+		    yeslink:"/index.php/Home/alishh/userPay"
+		})
+	})
+
+	$(".top-box-hint-button-font").click(function(){
+		window.location.href="/index.php/Home/alishh/addUser";
+	})
+</script>

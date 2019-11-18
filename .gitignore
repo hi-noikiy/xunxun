@@ -1,0 +1,8 @@
+/.idea
+/.idea/*
+
+/Application/Runtime
+/Application/Common/Conf/config.php
+/Public/Uploads/*
+ThinkPHP/Library/Think/*
+Application/Home/Controller/IndexController.class.php

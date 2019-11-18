@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<title>活动</title>
+
+<link href="../../../Public/Home/css/indexqixi.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../../Public/Home/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../../../Public/Home/js/awardRotate.js"></script>
+<script type="text/javascript" src="../../../Public/Home/js/indexqixi.js"></script>
+</head>
+<body>
+	
+	<!-- 弹出层 -->
+	<div class="cover"></div>
+	<!-- <div class="covers1">
+		<div class="covers_quit">
+			<img src="../../../Public/Home/images/qixi/pop_up_quit_icon.png" alt="pop_up_quit_icon" />
+		</div>
+		<div class="covers_icon">
+			<img src="../../../Public/Home/images/qixi/task_draw_reward_free_img.png" alt="task_draw_reward_free_img" />
+		</div>
+		<div class="covers_font">恭喜您获得1次<span>免费</span>的机会</div>
+		<div class="covers_btn">立即前往抽奖</div>
+	</div> -->
+
+	<!--弹层1-->
+	<div class="covers2">
+		<div class="covers_quit">
+			<img src="../../../Public/Home/images/qixi/pop_up_quit_icon.png" alt="pop_up_quit_icon" />
+		</div>
+		<div class="covers_icon">
+			<img src="../../../Public/Home/images/qixi/task_draw_reward_gereward_img.png" alt="task_draw_reward_gereward_img" />
+		</div>
+		<div class="covers_font">恭喜您获得<span>10金币</span>奖励</div>
+		<div class="covers_btn covers_btn1">支付200金币再抽一次</div>
+		<a href="#rules_con_footer"><div class="covers_btn2">完成任务,免费抽奖</div></a>
+	</div>
+
+	<!--弹层2-->
+	<div class="covers3" style="background-image:url('../../../Public/Home/images/qixi/77.png');background-size: cover;background-repeat: no-repeat;height: 107vw;">
+		<div class="covers_quit">
+			<img src="../../../Public/Home/images/qixi/pop_up_quit_icon.png" alt="pop_up_quit_icon" style="margin-top: -38%;margin-left: 80%;" />
+		</div>
+		<!-- <div class="covers_icon">
+			<img src="../../../Public/Home/images/qixi/task_draw_reward_tip_img.png" alt="task_draw_reward_tip_img" />
+		</div>
+		<div class="covers_font">今天的免费机会已经用完</div>
+		<div class="covers_btn covers_btn1">支付200金币再抽一次</div>
+		<a href="#rules_con_footer"><div class="covers_btn2">完成任务,免费抽奖</div></a> -->
+	</div>
+
+	<!-- <div class="float_btn" id="guize">规则奖励</div> -->
+	<div class="float_btn" id="guize2">规则奖励2</div>
+
+	<!--规则弹窗jq-->
+	<script type="text/javascript">
+	  $("#guize").click(function(){
+	  	$(".covers2").show();
+	  });
+
+	  $("#guize2").click(function(){
+	  	$(".covers3").show();
+	  });
+	</script>
+
+
+
+	<div class="turntable" style="height: 262vw">
+		<img class="turntablebg" src="../../../Public/Home/images/qixi/task_draw_reward_default_bg.png" alt="turntableBg"/>
+		<img class="turntablebg" src="../../../Public/Home/images/qixi/task_draw_reward_default_bg2.png" alt="turntableBg2"/>
+	</div>
+	<div class="taskRules" style="height: 213vw">
+		<!--排行榜前三-->
+		<div style="margin-top: 20vw;height: 40vw;">
+			<img src="../../../Public/Home/images/qixi/1234.png" alt="" class="ranking-img">
+			<!-- 排行榜第三 -->
+			<div class="task" style="float: left;margin-top: 7%;width: 22vw;margin-left: 15%;height: 31vw;position: relative;">
+				<div ><img class="taskRules-hean-img" src="../../../Public/Home/images/qixi/img.jpg"></div>
+				<div>
+					<p class="taskRules-hean-font">啦拉拉啦啦啦</p>
+				</div>
+				<div class="taskRules-hean-box">
+					<img class="taskRules-little-crown" src="../../../Public/Home/images/qixi/crown.png" alt="">
+					<img class="taskRules-little-img1" src="../../../Public/Home/images/qixi/img.jpg" alt="">
+					<img class="taskRules-little-img2" src="../../../Public/Home/images/qixi/img.jpg" alt="">
+					<img class="taskRules-little-img3" src="../../../Public/Home/images/qixi/img.jpg" alt="">
+					<img class="taskRules-little-img4" src="../../../Public/Home/images/qixi/blue.png" alt="">
+				</div>
+			</div>
+			<!-- 排行榜第一 -->
+			<div class="task2" style="float: left;margin-top: 1%;width: 22vw;margin-left: 1%;height: 31vw;position: relative;">
+				<volist name="top" id="topinfo" offset="0" length='1'>
+				<img class="taskRules-hean-img" src="{topinfo.avatar}">
+				<div>
+					<p class="taskRules-hean-font">{topinfo.nickname}</p>
+				</div>
+				<div class="taskRules-hean-box">
+					<img class="taskRules-little-crown" src="../../../Public/Home/images/qixi/crown.png" alt="">
+					<foreach name="topinfo.likeimg" item="ava" >
+						<img class="taskRules-little-img1" src="{ava.avatar}" alt="">
+						<img class="taskRules-little-img2" src="{ava.avatar}" alt="">
+						<img class="taskRules-little-img3" src="{ava.avatar}" alt="">
+						<img class="taskRules-little-img4" src="../../../Public/Home/images/qixi/pink.png" alt="">
+					</foreach>
+				</div>
+			</div>
+			<!-- 排行榜第二 -->
+			<div class="task3" style="float: left;margin-top: 7%;width: 22vw;margin-left: 1.5%;height: 31vw;position: relative;">
+				<img  class="taskRules-hean-img" src="../../../Public/Home/images/qixi/test2.jpg">
+				<div>
+					<p class="taskRules-hean-font">啦拉拉啦啦啦</p>
+				</div>
+				<div class="taskRules-hean-box">
+					<img class="taskRules-little-crown" src="../../../Public/Home/images/qixi/crown.png" alt="">
+					<img class="taskRules-little-img1" src="../../../Public/Home/images/qixi/img.jpg" alt="">
+					<img class="taskRules-little-img2" src="../../../Public/Home/images/qixi/img.jpg" alt="">
+					<img class="taskRules-little-img3" src="../../../Public/Home/images/qixi/img.jpg" alt="">
+					<img class="taskRules-little-img4" src="../../../Public/Home/images/qixi/yello.png" alt="">
+				</div>
+			</div>
+		</div>
+		<!--排行榜前七名-->
+		<div class="task4" >
+			<div class="task-list-number">05</div>
+			<img class="task-list-img" src="../../../Public/Home/images/qixi/img.jpg" alt="">
+			<div class="task-list-name">啦啦啦啦啦啦</div>
+			<div class="task-list-integral">12000</div>
+			<div class="task-list-integrals">积分</div>
+		</div>
+		<div class="task4" >
+			<div class="task-list-number">05</div>
+			<img class="task-list-img" src="../../../Public/Home/images/qixi/img.jpg" alt="">
+			<div class="task-list-name">啦啦啦啦啦啦</div>
+			<div class="task-list-integral">12000</div>
+			<div class="task-list-integrals">积分</div>
+		</div>
+		<div class="task4" >
+			<div class="task-list-number">05</div>
+			<img class="task-list-img" src="../../../Public/Home/images/qixi/img.jpg" alt="">
+			<div class="task-list-name">啦啦啦啦啦啦</div>
+			<div class="task-list-integral">12000</div>
+			<div class="task-list-integrals">积分</div>
+		</div>
+		<div class="task4" >
+			<div class="task-list-number">05</div>
+			<img class="task-list-img" src="../../../Public/Home/images/qixi/img.jpg" alt="">
+			<div class="task-list-name">啦啦啦啦啦啦</div>
+			<div class="task-list-integral">12000</div>
+			<div class="task-list-integrals">积分</div>
+		</div>
+		<div class="task4" >
+			<div class="task-list-number">05</div>
+			<img class="task-list-img" src="../../../Public/Home/images/qixi/img.jpg" alt="">
+			<div class="task-list-name">啦啦啦啦啦啦</div>
+			<div class="task-list-integral">12000</div>
+			<div class="task-list-integrals">积分</div>
+		</div>
+		<div class="task4" >
+			<div class="task-list-number">05</div>
+			<img class="task-list-img" src="../../../Public/Home/images/qixi/img.jpg" alt="">
+			<div class="task-list-name">啦啦啦啦啦啦</div>
+			<div class="task-list-integral">12000</div>
+			<div class="task-list-integrals">积分</div>
+		</div>
+		<!--本人数据-->
+		<div class="task-my" >
+			<div class="task-list-number">05</div>
+			<img class="task-list-img" src="../../../Public/Home/images/qixi/img.jpg" alt="">
+			<div class="task-list-name">啦啦啦啦啦啦</div>
+			<div class="task-list-integral">12000</div>
+			<div class="task-list-integrals">积分</div>
+		</div>
+	</div>
+
+		
+</body>
+</html>

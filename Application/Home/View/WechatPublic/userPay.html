@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>充值</title>
+    <style>
+	    *{
+		    margin: 0;
+		    padding: 0;
+	    }
+		/* 总盒子 */
+        .backgroud-content-box{
+			position:fixed;
+			top: 0;
+			left: 0;
+			width:100%;
+			height:100%;
+			z-index:-10;
+			zoom: 1;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center 0;
+			background-image:url(../../../../Public/Home/images/background.png);
+        }
+		 /* 顶端盒子 */
+		.top-box{
+			width: 100%;
+			height: 21vw;
+			border: 0.0625rem solid #FFFFFF;
+			background-color: #FFFFFF;
+			margin-top: 5vw;
+		}
+		/* 用户信息 */
+		.top-box-left{
+			width: 65%;
+			height: 100%;
+			/* border: 1px solid firebrick; */
+			margin-left: 5%;
+		}
+		/* 用户头像 */
+		.top-box-left-avatar{
+			width: 18vw;
+			height: 18vw;
+			border-radius: 3rem;
+			/*margin-top: 2vw;*/
+		}
+		/* 用户头像 */
+		.top-box-left-avatar-no{
+			width: 18vw;
+			height: 18vw;
+			border-radius: 3rem;
+			margin-top: 2vw;
+			background-image: url('http://image.57xun.com/Public/Uploads/image/logo.png');
+		}
+		/* 用户昵称 */
+		.top-box-left-nickname{
+			left: 20vw;
+			top: -16vw;
+			position: relative;
+			z-index: 2;
+			font-size:4vw;
+		}
+		/* 用户ID */
+		.top-box-left-id{
+			left: 20vw;
+			top: -15vw;
+			position: relative;
+			z-index: 2;
+			font-size:4vw;
+		}
+		/* 切换账号 */
+		.top-box-right{
+			font-size: 3vw;
+			line-height: 6vw;
+			float: right;
+			margin-top: -14vw;
+			margin-right: 3vw;
+			color: #FF7D6C;
+			border-left: 0.1875rem solid #D8D8D8;
+			font-family:PingFangSC-Medium;
+			font-weight: bold;
+		}
+		/* 充值盒子 */
+		.pay-box{
+			width: 90%;
+			height: 75%;
+			background: #fff;
+			margin-top: 5vw;
+			margin-left: 5%;
+			border-radius: 0.625rem;
+
+		}
+		/* 选择充值豆豆 */
+		.pay-box-select-bean{
+			width: 100%;
+			height: 60vw;
+			padding-top: 3vw;
+			margin-left: 0.5%;
+		}
+		/*充值豆豆小盒子*/
+		.pay-box-select-bean-letter{
+			width: 27vw;
+			height: 12vw;
+			margin-left: 2.5%;
+			margin-top: 5%;
+			float: left;
+			zoom: 1;
+			background-size: cover;
+			background-position: center 0;
+			background-image:url(../../../../Public/Home/images/frameno.png) ;
+			background-repeat: no-repeat;
+		}
+		.pay-box-select-bean-letter-new{
+			width: 27vw;
+			height: 12vw;
+			margin-left: 2.5%;
+			margin-top: 5%;
+			float: left;
+			zoom: 1;
+			background-size: cover;
+			background-position: center 0;
+			background-image:url(../../../../Public/Home/images/frame.png) ;
+			background-repeat: no-repeat;
+		}
+		/* 充值豆豆背景图 */
+		.pay-box-select-bean-letter-back{
+			max-width: 100%;
+			z-index: 1;
+		}
+		/* 豆豆本豆豆 */
+		.pay-box-select-bean-letter-bean{
+			left: 1vw;
+			top:  -9.5vw;
+			width: 6vw;
+			height: 6vw;
+			/* width: 1.375rem;
+			height: 1.375rem; */
+			position: relative;
+			z-index: 2;
+		}
+		/*充值数量*/
+		.pay-box-select-bean-letter-num{
+			left: 10vw;
+			margin-top: 1.5vw;
+			/* width: 1.875rem;
+			height: 1.875rem; */
+			position: relative;
+			z-index: 2;
+			font-size:3.5vw;
+			font-weight: bold;
+		}
+		/*充值金额*/
+		.pay-box-select-bean-letter-money{
+			left: 8vw;
+			position: relative;
+			z-index: 2;
+			color: #FFB9B9;
+			font-size: 3vw;
+		}
+		/* 充值提示语 */
+		.pay-box-select-bean-reminder{
+			width: 100%;
+			text-align: center;
+			margin-bottom: 10vh;
+			font-size: 3vw;
+		}
+		/* 确认充值按钮 */
+		.pay-box-foot-button{
+			font-size: 3vw;
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			line-height: 10vw;
+			background: #ff7171;
+			border-radius: 15px;
+			color: white;
+		}
+
+    </style>
+</head>
+<body>
+    <div class="backgroud-content-box">
+		<!-- 顶端盒子 -->
+		<div class="top-box">
+			<div class="top-box-left">
+				<div class="top-box-left-avatar-no">
+					<img src="{$user['avatar']}" class="top-box-left-avatar" alt="">
+				</div>
+				<div class="top-box-left-nickname">{$user['nickname']}</div>
+				<div class="top-box-left-id" user_id="{$user['id']}">ID:{$user['id']}</div>
+			</div>
+			<div class="top-box-right">&nbsp;&nbsp;<span>切换账号</span></div>
+		</div>
+		<!-- 顶端盒子结束 -->
+		<!-- 充值盒子 -->
+	    <div class="pay-box">
+		    <!-- 选择充值豆豆 -->
+		    <div class="pay-box-select-bean">
+			    <volist name="result" id="result">
+				    <div class="pay-box-select-bean-letter" id="{$result.id}" diamond="{$result.diamond}" rmb="{$result.rmb}" >
+					    <p class="pay-box-select-bean-letter-num">{$result.diamond}</p>
+					    <p class="pay-box-select-bean-letter-money">￥{$result.rmb}</p>
+				    </div>
+			    </volist>
+		    </div>
+		    <div class="pay-box-select-bean-reminder">未成年在Mua充值，必须得到家长或其他监护人同意</div>
+		    <!-- 点击充值 -->
+		    <div class="pay-box-foot-button">确认充值</div>
+	    </div>
+		<!-- 充值盒子结束 -->
+    </div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	var coin;
+	var rmb;
+	var uid = $(".top-box-left-id").attr('user_id');
+	// 切换账号
+    $(".top-box-right").click(function(){
+        window.location.href="/index.php/Home/wechatPublic/addUser";
+    })
+	// 选中充值
+	$(".pay-box-select-bean-letter").each(function(){
+		$(this).bind('click',function(){
+			$('div').removeClass('pay-box-select-bean-letter-new');
+			$(this).addClass("pay-box-select-bean-letter-new");
+			rmb = $(this).attr('rmb');
+			coin = $(this).attr('diamond');
+		})
+	})
+	$(".pay-box-foot-button").click(function(){
+	    if(uid == "" || rmb == ""){
+	        return false;
+		}else{
+            $.ajax({
+                url:'/index.php/Api/wechatPublic/publicPay',
+                data:{uid:uid,rmb:rmb},
+                type:'post',
+                dataType:'json',
+                success:function(resa){
+                   if(resa !== 500){
+		 			function jsApiCall()
+		            {
+		                WeixinJSBridge.invoke(
+		                    'getBrandWCPayRequest',
+							resa,
+		                    function(res){
+		                        WeixinJSBridge.log(res.err_msg);
+								if(res.err_msg=='get_brand_wcpay_request:ok'){
+									alert('支付成功！');
+								}else{
+									alert('支付失败！');
+								}
+		                    }
+		                );
+		            }
+	           // function callpay()
+	           // {
+	                if (typeof WeixinJSBridge == "undefined"){
+	                    if( document.addEventListener ){
+	                        document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+	                    }else if (document.attachEvent){
+	                        document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+	                        document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+	                    }
+	                }else{
+	                    jsApiCall();
+	                }
+	           }else{
+	           		alert('支付参数异常,请重试！');
+	           }
+// console.log(res);
+                //        window.location.href=res.MWEB_URL;
+                   // }else{
+                   //     alert ('错误');
+                   // }
+                }
+            })
+		}
+	})
+</script>
+

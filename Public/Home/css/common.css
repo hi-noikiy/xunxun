@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding: 0;
+    outline: none!important;
+}
+body{
+    font-size: 12px;
+    color: #000;
+    background-color: #fff;
+    min-width: 1200px;
+    width: 100%;
+    font-family: Microsoft YaHei,"微软雅黑",-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+img {
+    border: 0;
+}
+li{
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+
+.inline{
+    display: inline-block;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.fixed{
+    position: fixed;
+}
+
+
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+
+
+.clearfix:before,
+.clearfix:after{
+    display: table;
+    content: " ";
+}
+.clearfix:after{
+    clear: both;
+}
+.link-wrap{
+    color: inherit;
+}
+
+
+
+.container{
+    width: 1180px;
+    margin:0 auto;
+}
+
+/******* 头 ***********/
+.header .top-bar{ height: 30px; width: 100%; line-height: 30px; background: #282828; font-size: 12px; color: #fff; }
+.header .downloads a{ color: #fff;  }
+.header .downloads a:hover{ color: #ccc;}
+.header .main-header{ height: 80px;line-height: 80px; color: #646e78; font-size:18px;  }
+.header .main-header .logos img{ height: 50px; margin-top: 12px;}
+
+/******* 尾 ***********/
+.footer{ margin-bottom: 100px;}
+.footer .left-con{width: 920px;}
+.footer .logo-info { height: 123px; border-bottom: solid 1px #bec3c8;}
+.footer .logo-info .logos { margin-top: 40px;}
+.footer .logo-info .logos img{ height: 38px;}
+.footer .logo-info .footer-logo-text{ border-left: solid 1px #bec3c8; margin-left: 18px;padding-left: 20px; color: #505050; font-size: 14px; line-height: 24px;}
+.footer  .logo-info .tel-info{  color: #505050; font-size: 14px; line-height: 24px; margin-top: 32px;}
+.footer  .logo-info .phone-num{  color: #ff5000; font-size: 36px; line-height: 36px; margin-bottom: 12px;}
+.footer .qr-code-info { margin-top: 42px;}
+.footer .qr-code { width:100px; text-align: center; margin-left: 30px;}
+.footer .qr-code p{text-align: center; margin: 5px; font-size: 15px; color: #505050;}
+.footer .qr-code-info img{ width: 100%;}
+.footer .site-info p{ color: #505050; font-size: 15px; line-height: 30px; margin-top: 22px; }
+.footer .site-info p a{ color: #505050; }
+.footer .site-info p a:hover{ color: #000; }
+
+
+.border { height: 1px; font-size: 0px; border-top: solid 1px #bec3c8;}
+
+.alert-modal{ position: fixed; width: 100%;height: 100%; top: 0; left: 0;bottom: 0;right: 0; z-index: 999;}
+.alert-modal .alert-mask{ width: 100%;height: 100%;background: rgba(0,0,0,.5);}
+.alert-modal .alert-box{ width:350px;height: 150px;background: #fff; position: absolute; left: 50%;margin-left: -175px; top: 250px;border-radius: 4px;  box-shadow: 1px 1px 5px #333;}
+.alert-modal .alert-con{ min-height:45px;background: url("../images/success-icon.png") left top no-repeat; background-size: contain; margin-top: 50px; margin-left: 70px; text-indent: 60px; padding: 3px 0;}
+.alert-modal .alert-con h1{ font-size: 17px;color: #3c4650; line-height: 20px;}
+.alert-modal .alert-con h3{ font-size: 12px; color: #a8aeb3; line-height: 20px;}
+.alert-modal.info .alert-con{ background: url("../images/info-icon.png") left top no-repeat; background-size: contain;}
+.alert-modal.error .alert-con{ background: url("../images/error-icon.png") left top no-repeat; background-size: contain;}
+
+.alert-modal .close,.loan-application .close{position: absolute;width: 20px;height: 20px; line-height: 15px; border-radius: 50%;background: #ccc;font-size: 16px; text-align: center; color: #333; cursor: pointer;}
+.alert-modal .alert-box .close{ top: -10px; right:-10px; }
+.loan-application .close{ top: -10px; right:-10px;}
+
+
+.car-albums .car-tag:nth-of-type(2){ left: 75px!important;}
+.car-albums .car-tag:nth-of-type(3){ left: 130px!important;}
+
+.pop-div{position: fixed;top:0;right: 0;bottom:0;left:0;background-color:rgba(000,0,0,0.6);filter:alpha(opacity=60);display: none;z-index: 100;}
+.pop-cont{display:none;position: fixed;left:50%;top:50%;transform: translate(-50%, -50%);border-radius: 4px;background: #fff;border:1px solid #ccc;z-index: 101;}

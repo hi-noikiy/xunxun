@@ -1,0 +1,25 @@
+.ml10{ margin-left: 10px;}
+.mb10{ margin-bottom: 10px;}
+.mt-16{ margin-top: 16px;}
+
+.w110{ width: 110px;}
+.w300{ width: 300px;}
+.h30{ height: 30px;}
+
+.w_100{ width: 100%;}
+.w_13_3{ width: 13.3%;}
+.w_20{ width: 20%;}
+
+
+.bg_F2F2F2{ background-color: #F2F2F2;}
+
+
+.border-n{ border: none;}
+
+.form-group label{width: 120px;padding-right: 10px;text-align: right}
+
+.content_left{
+    margin-left: 5px;
+    text-align: left;
+}
+
