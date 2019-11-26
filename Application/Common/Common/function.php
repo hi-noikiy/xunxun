@@ -1,6 +1,5 @@
 <?php
 // 验证 验证码
-// 验证 验证码
 use Common\Util\RedisCache;
 function check_verify($code, $id = ''){    
 	$verify = new \Think\Verify();    
