@@ -100,10 +100,12 @@ function getImage($url,$save_dir='',$filename='',$type=0){
     if(0!==strrpos($save_dir,'/')){
         $save_dir.='/';
     }
+
     //创建保存目录
     if(!file_exists($save_dir)&&!mkdir($save_dir,0777,true)){
         return array('file_name'=>'','save_path'=>'','error'=>5);
     }
+    
     //获取远程文件所采用的方法
     if($type){
         $ch=curl_init();
