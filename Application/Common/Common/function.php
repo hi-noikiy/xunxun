@@ -105,7 +105,7 @@ function getImage($url,$save_dir='',$filename='',$type=0){
     if(!file_exists($save_dir)&&!mkdir($save_dir,0777,true)){
         return array('file_name'=>'','save_path'=>'','error'=>5);
     }
-    
+
     //获取远程文件所采用的方法
     if($type){
         $ch=curl_init();
@@ -199,6 +199,9 @@ function custom_hex_10000($num){
     return round($num / 10000, 4);
 }
 
+/**
+*打印数据格式
+*/
 function p($data){
     echo "<pre/>";
     print_r($data);
