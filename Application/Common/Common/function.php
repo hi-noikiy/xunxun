@@ -13,6 +13,7 @@ function msectime()
     $msectime =  (int)sprintf('%.0f', (floatval($msec) + floatval($sec)) * 1000);
     return $msectime;
 }
+
 /**
  * curl请求
  * @param $url
